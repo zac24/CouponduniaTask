@@ -13,6 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.restaurantListViewController = [[ RestaurantListViewController alloc]initWithNibName:@"RestaurantListViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:self.restaurantListViewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = navigationController;
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

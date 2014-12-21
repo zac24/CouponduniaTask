@@ -13,4 +13,22 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "AFNetworking.h"
+    #import "UIImageView+AFNetworking.h"
+
 #endif
+
+
+
+// ========================== Static Messages of the app ==============================
+
+#define BASE_URL @"http://staging.couponapitest.com/task_data.txt"
+
+#define app_name @"Restaurant"
+#define Page_Title @"Restaurants"
+#define Error @"Error Retrieving Data"
+#define PullToRefresh @"Pull to refresh..."
+#define No_data @"Couldn't load any data at this moment"
+#define Location_turn_off @"Location Services is off"
+#define Location_turn_msg_off @"App needs to access the location services, Please turn on the location services in setting"
+#define network_connectivity @"Your device is not connected to the Internet. Please check and try again."
