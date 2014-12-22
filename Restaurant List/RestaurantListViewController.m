@@ -67,10 +67,10 @@
 // Updates the user location
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    CLLocation *currentLocation = [locations objectAtIndex:0];
+   // CLLocation *currentLocation = [locations objectAtIndex:0];
     CLLocation *location = [locations lastObject];
      CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
-    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error){
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error){
      if (!(error)){
          CLPlacemark *placemark = [placemarks objectAtIndex:0];
          // to set the section title of UITableView
@@ -96,6 +96,8 @@
     switch (status) {
         case kCLAuthorizationStatusNotDetermined: {
             NSLog(@"location status are not determined");
+            [_locationManager requestWhenInUseAuthorization];
+
         } break;
         case kCLAuthorizationStatusDenied: {
             NSLog(@"User denied the location permission");
@@ -109,7 +111,6 @@
         default:
             break;
     }
-   
 }
 
 -(void)getListOfRestaurants{

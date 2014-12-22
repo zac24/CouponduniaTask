@@ -30,5 +30,6 @@
 #define PullToRefresh @"Pull to refresh..."
 #define No_data @"Couldn't load any data at this moment"
 #define Location_turn_off @"Location Services is off"
+#define Location_turn_on_after_app_launch @"Please restart the app to get the correct data"
 #define Location_turn_msg_off @"App needs to access the location services, Please turn on the location services in setting"
 #define network_connectivity @"Your device is not connected to the Internet. Please check and try again."
